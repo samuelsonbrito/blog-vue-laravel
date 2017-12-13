@@ -13,9 +13,9 @@
                     <div class="col-md-4">
 
 
-                        <my-painel titulo="Conteúdo 1">
+                        <my-caixa titulo="Conteúdo 1" qtd="69" cor="orange" icone="fa fa-shopping-cart">
                             1
-                        </my-painel>                    
+                        </my-caixa>                    
                     
                     </div>   
 
