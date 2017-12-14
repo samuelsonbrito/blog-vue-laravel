@@ -19,7 +19,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('my-topo', require('./components/Topo.vue'));
 Vue.component('my-painel', require('./components/Painel.vue'));
 Vue.component('my-caixa', require('./components/Caixa.vue'));
-
+Vue.component('my-pagina', require('./components/Pagina.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -1072,7 +1072,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(56);
+module.exports = __webpack_require__(59);
 
 
 /***/ }),
@@ -1100,6 +1100,7 @@ Vue.component('example-component', __webpack_require__(39));
 Vue.component('my-topo', __webpack_require__(42));
 Vue.component('my-painel', __webpack_require__(45));
 Vue.component('my-caixa', __webpack_require__(48));
+Vue.component('my-pagina', __webpack_require__(56));
 
 var app = new Vue({
   el: '#app'
@@ -43658,20 +43659,13 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "icon" }, [_c("i", { class: _vm.icone })]),
     _vm._v(" "),
-    _vm._m(0, false, false)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+    _c("a", { staticClass: "small-box-footer", attrs: { href: _vm.url } }, [
       _vm._v("\n            Ver mais "),
       _c("i", { staticClass: "fa fa-arrow-circle-right" })
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -43683,6 +43677,125 @@ if (false) {
 
 /***/ }),
 /* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(57)
+/* template */
+var __vue_template__ = __webpack_require__(58)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\Pagina.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-19a71286", Component.options)
+  } else {
+    hotAPI.reload("data-v-19a71286", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    props: ['tamanho'],
+    computed: {
+        defineTamanho: function defineTamanho() {
+
+            if (this.tamanho >= 12) {
+                return "col-md-12";
+            }
+
+            if (this.tamanho <= 2) {
+                return "col-md-2 col-md-offset-5";
+            }
+
+            if (this.tamanho % 2 == 0) {
+                return "col-md-" + this.tamanho + " col-md-offset-" + (12 - this.tamanho) / 2;
+            } else {
+                return "col-md-" + (parseInt(this.tamanho) + 1) + " col-md-offset-" + (12 - (parseInt(this.tamanho) + 1)) / 2;
+            }
+            //return "col-md-4 col-md-offset-4";
+        }
+    }
+
+});
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { class: _vm.defineTamanho }, [_vm._t("default")], 2)
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-19a71286", module.exports)
+  }
+}
+
+/***/ }),
+/* 59 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

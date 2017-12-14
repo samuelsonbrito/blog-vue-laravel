@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                
+    <my-pagina tamanho="10">
+
                 <my-painel titulo="Painel">
                 
 
@@ -13,8 +11,7 @@
                     <div class="col-md-4">
 
 
-                        <my-caixa titulo="Conteúdo 1" qtd="69" cor="orange" icone="fa fa-shopping-cart">
-                            1
+                        <my-caixa titulo="Artigos" qtd="33" cor="orange" icone="fa fa-pie-chart" url="{{ route('artigos.index') }}">
                         </my-caixa>                    
                     
                     </div>   
@@ -22,28 +19,21 @@
 
                     <div class="col-md-4">
 
-
-                        <my-painel titulo="Conteúdo 2" cor="info">
-                            2
-                        </my-painel>                    
+                        <my-caixa titulo="Usuários" qtd="3" cor="blue" icone="ion-person-stalker">
+                        </my-caixa>                    
                     
                     </div>   
 
 
                     <div class="col-md-4">
 
-
-                        <my-painel titulo="Conteúdo 3">
-                            3
-                        </my-painel>                    
-                    
+                        <my-caixa titulo="Autores" qtd="2" cor="red" icone="fa fa-user">
+                        </my-caixa> 
                     </div>                
                 
                 </div>
                 
                 </my-painel>
-
-            </div>
-        </div>
-    </div>
+    
+    </my-pagina>
 @endsection
